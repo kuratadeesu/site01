@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: 【屋号】と【地域名】を実際のものに置き換える(エディタの一括置換が便利) -->
+  <title>となりのWeb屋 | 大阪の小さなお店・会社のホームページ制作</title>
+  <meta name="description" content="大阪周辺の個人事業主・小さな会社向けホームページ制作。スマホで見やすく、表示が速く、維持費が安い。現役ITエンジニアが対応します。">
+  <meta property="og:title" content="となりのWeb屋 | ホームページ制作">
+  <meta property="og:description" content="スマホで見て、すぐ電話したくなるホームページを。">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">となりのWeb屋</a>
+      <nav aria-label="メインメニュー">
+        <ul class="nav">
+          <li><a href="#strengths">特長</a></li>
+          <li><a href="#flow">制作の流れ</a></li>
+          <li><a href="#price">料金</a></li>
+          <li><a href="#contact" class="nav-cta">相談する</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ヒーロー -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>
+            <span>スマホで見て、</span><span>すぐ電話したくなる</span><span>ホームページを。</span>
+          </h1>
+          <p class="lead">
+            【地域名】周辺の個人事業主・小さな会社のためのホームページ制作です。
+            現役ITエンジニアが、見た目だけでなく、表示の速さと、あとから困らない作りまで責任を持ちます。
+          </p>
+          <p class="hero-actions">
+            <a class="btn" href="#contact">無料で相談する</a>
+            <a class="btn btn-ghost" href="#price">料金を見る</a>
+          </p>
+        </div>
+
+        <!-- 診断(このページの目玉) -->
+        <div class="check" id="check">
+          <h2 class="check-title">いまのホームページ、5分で自己チェック</h2>
+          <p class="check-note">当てはまるものにチェックを入れてください。ホームページがまだない場合は、すべて空欄のままで大丈夫です。</p>
+          <form id="check-form">
+            <fieldset>
+              <legend class="visually-hidden">ホームページのチェック項目</legend>
+              <label class="item"><input type="checkbox" name="q" data-advice="スマホの画面幅に合わせた表示にすると、読みやすさが大きく変わります。"><span>スマホで文字や写真が見やすい</span></label>
+              <label class="item"><input type="checkbox" name="q" data-advice="電話番号をタップで発信できるようにすると、問い合わせの手間が減ります。"><span>電話番号をタップすると発信できる</span></label>
+              <label class="item"><input type="checkbox" name="q" data-advice="営業時間・定休日・地図は、お客様がまず探す情報です。目立つ場所に置きましょう。"><span>営業時間・定休日・場所がすぐ分かる</span></label>
+              <label class="item"><input type="checkbox" name="q" data-advice="料金やメニューが分かると、問い合わせ前の不安が減ります。"><span>料金やメニューがのっている</span></label>
+              <label class="item"><input type="checkbox" name="q" data-advice="店名で検索したときに公式サイトが出るよう、基本の設定を整えます。"><span>店名で検索すると公式サイトが出てくる</span></label>
+              <label class="item"><input type="checkbox" name="q" data-advice="古い情報のままだと不信感につながります。更新しやすい形にしておくのがおすすめです。"><span>1年以内に情報を更新している</span></label>
+            </fieldset>
+            <button class="btn" type="submit">結果を見る</button>
+          </form>
+          <div id="check-result" class="result" aria-live="polite" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特長 -->
+    <section class="section" id="strengths">
+      <div class="wrap split">
+        <h2>つくり方の特長</h2>
+        <dl class="points">
+          <div>
+            <dt>表示が速い</dt>
+            <dd>余計な仕組みを使わない軽い作りなので、電波の弱い場所でもスマホですぐ開きます。</dd>
+          </div>
+          <div>
+            <dt>壊れにくく、維持費が安い</dt>
+            <dd>定期的な更新が必要な部品を極力使わないため、運用の手間と費用を抑えられます。</dd>
+          </div>
+          <div>
+            <dt>仕組みづくりも相談できる</dt>
+            <dd>予約や顧客の管理など、ホームページの先にある「手間のかかる作業」も、エンジニアとして一緒に考えます。</dd>
+          </div>
+          <div>
+            <dt>引き渡しのルールが明確</dt>
+            <dd>ドメインやサーバーの名義、ソースコードの扱いを、契約前にきちんと説明します。</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 対応業種 -->
+    <section class="section alt" id="works">
+      <div class="wrap split">
+        <h2>こんな方に</h2>
+        <div>
+          <p class="plain">飲食店、美容室、整骨院、工務店・リフォーム会社、士業、個人で活動するフリーランスの方など、地域のお客様に見つけてもらいたい事業者さま向けです。</p>
+          <!-- TODO: 実績ができたら、サンプルサイトや制作事例へのリンクをここに追加 -->
+          <p class="plain muted">制作事例は準備中です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 流れ -->
+    <section class="section" id="flow">
+      <div class="wrap split">
+        <h2>制作の流れ</h2>
+        <ol class="flow">
+          <li><strong>ご相談</strong><span>お問い合わせフォームか、お電話でご連絡ください。</span></li>
+          <li><strong>ヒアリングとお見積り</strong><span>目的、お客様層、掲載したい内容をうかがい、金額と範囲をご提示します。</span></li>
+          <li><strong>制作と確認</strong><span>デザイン案をご確認いただきます。修正回数は契約書に明記します。</span></li>
+          <li><strong>公開</strong><span>公開手続きと、お手元で必要な操作のご説明まで行います。</span></li>
+          <li><strong>公開後のフォロー</strong><span>公開後しばらくして状況を確認し、必要に応じて改善をご提案します。</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 料金 -->
+    <section class="section alt" id="price">
+      <div class="wrap split">
+        <h2>料金の目安</h2>
+        <div>
+          <!-- TODO: 金額・範囲は自分の方針に合わせて必ず調整する -->
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th scope="col">プラン</th><th scope="col">内容</th><th scope="col">料金(税別)</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">ワンページ</th><td>名刺代わりの1ページ。お問い合わせ導線つき。</td><td>30,000円〜</td></tr>
+                <tr><th scope="row">基本(5ページ程度)</th><td>トップ、サービス、料金、アクセス、お問い合わせ。</td><td>100,000円〜</td></tr>
+                <tr><th scope="row">保守・更新</th><td>お知らせの更新、稼働の確認と、軽微な修正。</td><td>月額 5,000円〜</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="plain muted">ドメインの取得費用などの実費は別途かかります。内容により金額は変わりますので、まずはご相談ください。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="section" id="contact">
+      <div class="wrap split">
+        <h2>無料相談・お問い合わせ</h2>
+        <div>
+          <p class="plain">「まず何から始めればいいか分からない」という段階でも大丈夫です。内容を確認して、メールでご連絡します。</p>
+          <!-- TODO: Formspreeで作成したフォームのURLに置き換える(例: https://formspree.io/f/xxxxxxxx) -->
+          <form id="contact-form" class="form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+            <p class="field">
+              <label for="name">お名前</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </p>
+            <p class="field">
+              <label for="company">屋号・会社名(任意)</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </p>
+            <p class="field">
+              <label for="email">メールアドレス</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </p>
+            <p class="field">
+              <label for="message">ご相談内容</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </p>
+            <!-- 迷惑メール対策(ボットだけが入力する欄) -->
+            <p class="visually-hidden" aria-hidden="true"><label>空欄のままにしてください<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+            <button class="btn" type="submit">相談を送信する</button>
+            <p id="form-status" class="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-brand">【屋号】</p>
+      <p>対応エリア:【地域名】周辺(オンラインでの対応も可)</p>
+      <p><small>&copy; <span id="year">2026</span> 【屋号】</small></p>
+    </div>
+  </footer>
+</body>
+</html>
