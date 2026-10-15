@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>珈琲と軽食 みちくさ(制作サンプル)</title>
+  <meta name="description" content="となりのWeb屋が制作した、喫茶店ホームページのサンプルです。架空の店舗です。">
+  <!-- 架空の店舗なので、検索結果に出ないようにしておく -->
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- サンプルであることを明示する帯 -->
+  <div class="sample-bar">
+    <p>これは制作サンプルです。店舗・住所・電話番号・価格はすべて架空のものです。</p>
+    <a href="../../index.html#works">となりのWeb屋に戻る</a>
+  </div>
+
+  <header class="top">
+    <div class="wrap">
+      <p class="shop">珈琲と軽食 みちくさ</p>
+      <h1>ちょっと寄り道、<br>ほっとひと息。</h1>
+      <p class="intro">朝8時から、コーヒーとトーストでお待ちしています。</p>
+      <p id="today" class="today" role="status"></p>
+      <p class="actions">
+        <a class="btn" href="tel:0600000000">電話する 06-0000-0000</a>
+        <a class="btn btn-ghost" href="#menu">メニューを見る</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <!-- 営業時間などは、お客様が最初に探す情報なので上に置く -->
+    <section class="info" id="info">
+      <div class="wrap">
+        <h2>営業時間・アクセス</h2>
+        <dl class="info-list">
+          <div><dt>営業時間</dt><dd>8:00〜17:00<br><small>モーニングは11:00まで</small></dd></div>
+          <div><dt>定休日</dt><dd>水曜日</dd></div>
+          <div><dt>住所</dt><dd>大阪府〇〇市△△町1-2-3<br><small>〇〇駅から徒歩5分</small></dd></div>
+          <div><dt>電話</dt><dd><a href="tel:0600000000">06-0000-0000</a></dd></div>
+          <div><dt>席数</dt><dd>カウンター4席、テーブル8席</dd></div>
+        </dl>
+        <!-- 実際の案件では、ここにGoogleマップの埋め込みを入れる -->
+      </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="wrap">
+        <h2>メニュー</h2>
+
+        <h3>ドリンク</h3>
+        <ul class="menu-list">
+          <li><span class="name">ブレンドコーヒー</span><span class="price">450円</span></li>
+          <li><span class="name">カフェオレ</span><span class="price">500円</span></li>
+          <li><span class="name">紅茶(ホット・アイス)</span><span class="price">450円</span></li>
+          <li><span class="name">クリームソーダ</span><span class="price">600円</span></li>
+        </ul>
+
+        <h3>フード</h3>
+        <ul class="menu-list">
+          <li><span class="name">モーニングセット<small>トースト、ゆで卵、ドリンク(11時まで)</small></span><span class="price">650円</span></li>
+          <li><span class="name">ナポリタン</span><span class="price">900円</span></li>
+          <li><span class="name">ホットサンド</span><span class="price">750円</span></li>
+          <li><span class="name">自家製プリン</span><span class="price">400円</span></li>
+        </ul>
+        <p class="note">表示価格は税込です。</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="wrap">
+        <h2>お店について</h2>
+        <p>商店街の角にある、小さな喫茶店です。ひとりでも、お友達とでも、気軽に立ち寄ってください。</p>
+        <p>お持ち帰りのコーヒーも、おこなっています。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 珈琲と軽食 みちくさ(サンプル)</p>
+      <p><small>制作:となりのWeb屋</small></p>
+    </div>
+  </footer>
+
+  <!-- スマホでは、画面の下に電話ボタンを常に表示する -->
+  <a class="call-bar" href="tel:0600000000">電話する 06-0000-0000</a>
+</body>
+</html>

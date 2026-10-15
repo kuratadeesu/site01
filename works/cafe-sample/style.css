@@ -1,0 +1,105 @@
+:root {
+  --bg: #fbfaf6;
+  --paper: #ffffff;
+  --ink: #1b2b22;
+  --muted: #55645b;
+  --green: #1f5a3e;
+  --green-dark: #174630;
+  --cherry: #b3261e;
+  --line: #d9ddd3;
+  --serif: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --sans: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  line-height: 1.85;
+  color: var(--ink);
+  background: var(--bg);
+}
+h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: var(--green); }
+:focus-visible { outline: 3px solid var(--cherry); outline-offset: 2px; }
+.wrap { width: min(100% - 2.5rem, 720px); margin-inline: auto; }
+
+/* サンプルであることを示す帯 */
+.sample-bar {
+  background: var(--ink); color: #fff;
+  font-size: .8rem; line-height: 1.6;
+  padding: .5rem 1.25rem;
+  display: flex; flex-wrap: wrap; gap: .25rem 1rem; justify-content: center;
+}
+.sample-bar a { color: #fff; }
+
+/* ボタン */
+.btn {
+  display: inline-block; font: inherit; font-weight: 700;
+  padding: .75em 1.5em; border: 2px solid var(--green); border-radius: 4px;
+  background: var(--green); color: #fff; text-decoration: none;
+}
+.btn:hover { background: var(--green-dark); border-color: var(--green-dark); }
+.btn-ghost { background: transparent; color: var(--green); }
+.btn-ghost:hover { background: var(--green); color: #fff; }
+
+/* 最上部 */
+.top { padding: clamp(2.5rem, 8vw, 5rem) 0 clamp(2rem, 6vw, 3.5rem); }
+.shop { font-weight: 700; color: var(--cherry); letter-spacing: .12em; font-size: .95rem; }
+.top h1 {
+  margin-top: .75rem;
+  font-family: var(--serif); font-weight: 900;
+  font-size: clamp(2.2rem, 8vw, 3.8rem); line-height: 1.35;
+}
+.intro { margin-top: 1rem; color: var(--muted); }
+.today {
+  display: inline-block; margin-top: 1.25rem;
+  padding: .2em .9em; border-radius: 999px;
+  background: var(--paper); border: 1px solid var(--line);
+  font-size: .9rem; font-weight: 700;
+}
+.today:empty { display: none; }
+.today::before {
+  content: ""; display: inline-block; width: .6em; height: .6em; margin-right: .5em;
+  border-radius: 50%; background: var(--muted);
+}
+.today.open::before { background: var(--green); }
+.today.closed::before { background: var(--cherry); }
+.actions { margin-top: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+
+/* 見出し */
+section { padding: clamp(2rem, 6vw, 3.5rem) 0; border-top: 1px solid var(--line); }
+h2 { font-family: var(--serif); font-weight: 900; font-size: 1.6rem; margin-bottom: 1.25rem; }
+h3 { font-size: 1rem; font-weight: 700; color: var(--green); margin: 1.5rem 0 .25rem; }
+
+/* 営業時間 */
+.info-list > div { display: grid; grid-template-columns: 6em 1fr; gap: 1rem; padding: .8rem 0; border-bottom: 1px dotted #aab3a8; }
+.info-list dt { font-weight: 700; color: var(--muted); }
+.info-list small { color: var(--muted); }
+.info-list a { font-weight: 700; }
+
+/* メニュー */
+.menu-list li { display: flex; align-items: baseline; gap: .75rem; padding: .7rem 0; border-bottom: 1px dotted #aab3a8; }
+.menu-list .name { flex: 1; font-weight: 500; }
+.menu-list .name small { display: block; color: var(--muted); font-size: .82rem; line-height: 1.5; }
+.menu-list .price { font-weight: 700; white-space: nowrap; }
+.note { margin-top: 1rem; color: var(--muted); font-size: .85rem; }
+
+.about p + p { margin-top: .75rem; }
+
+footer { background: var(--ink); color: #e5ece7; padding: 2rem 0 5.5rem; font-size: .9rem; }
+footer p + p { margin-top: .25rem; }
+
+/* スマホ下部の電話ボタン */
+.call-bar { display: none; }
+@media (max-width: 720px) {
+  .call-bar {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    text-align: center; font-weight: 700; text-decoration: none;
+    background: var(--cherry); color: #fff;
+    padding: .9rem 1rem calc(.9rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (min-width: 721px) { footer { padding-bottom: 2rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
