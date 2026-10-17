@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>予約台帳デモ(架空のサロン)|となりのWeb屋</title>
+  <meta name="description" content="となりのWeb屋が作った、予約管理の動くデモです。架空のサロンのデータを使っています。">
+  <!-- 架空のデモなので、検索結果に出ないようにしておく -->
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="demo-bar">
+    <p>これは動くデモです。サロン名・お客様名・電話番号はすべて架空で、入力したデータはこのブラウザの中にだけ保存されます(サーバーには送信されません)。</p>
+    <a href="../../index.html#works">となりのWeb屋に戻る</a>
+  </div>
+
+  <header class="head">
+    <div class="wrap">
+      <p class="eyebrow">予約台帳デモ</p>
+      <h1>サンプルサロン 予約台帳</h1>
+      <p class="lead">紙やExcelで管理している予約を、ブラウザで一覧できるようにしたイメージです。</p>
+      <p class="tabs">
+        <button type="button" class="tab" id="tab-board" aria-pressed="true">予約台帳</button>
+        <button type="button" class="tab" id="tab-customers" aria-pressed="false">顧客一覧</button>
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- 予約台帳 -->
+    <section id="view-board" class="board-grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h2 id="board-title">予約</h2>
+          <p class="date-pick">
+            <label for="board-date">日付を変える</label>
+            <input id="board-date" type="date">
+          </p>
+        </div>
+        <ul id="board" class="board"></ul>
+      </div>
+
+      <div class="panel">
+        <h2>予約を追加</h2>
+        <form id="add-form" class="form" novalidate>
+          <p class="field">
+            <label for="f-date">日付</label>
+            <input id="f-date" type="date" required>
+          </p>
+          <p class="field">
+            <label for="f-time">時間</label>
+            <select id="f-time" required></select>
+          </p>
+          <p class="field">
+            <label for="f-name">お名前</label>
+            <input id="f-name" type="text" autocomplete="off" required>
+          </p>
+          <p class="field">
+            <label for="f-phone">電話番号(任意)</label>
+            <input id="f-phone" type="tel" autocomplete="off">
+          </p>
+          <p class="field">
+            <label for="f-menu">メニュー</label>
+            <select id="f-menu"></select>
+          </p>
+          <p class="field">
+            <label for="f-memo">メモ(任意)</label>
+            <input id="f-memo" type="text" autocomplete="off">
+          </p>
+          <button class="btn" type="submit">予約を追加する</button>
+          <p id="msg" class="msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 顧客一覧 -->
+    <section id="view-customers" class="panel" hidden>
+      <h2>顧客一覧</h2>
+      <p class="muted">予約を入れると、お客様の情報が自動でたまります。別に入力する必要はありません。</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th scope="col">お名前</th><th scope="col">電話番号</th><th scope="col">予約回数</th><th scope="col">直近の予約</th></tr>
+          </thead>
+          <tbody id="customers"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 操作 -->
+    <section class="panel tools">
+      <h2>データの扱い</h2>
+      <p class="muted">Excelで開けるCSVに書き出せます。元に戻したいときは、初期データに戻せます。</p>
+      <p class="tool-actions">
+        <button type="button" class="btn btn-ghost" id="btn-csv">CSVを書き出す</button>
+        <button type="button" class="btn btn-ghost" id="btn-reset">初期データに戻す</button>
+      </p>
+    </section>
+
+    <section class="panel real">
+      <h2>実際の案件では</h2>
+      <p>このデモはブラウザの中だけで動いています。実際の案件では、データをデータベースに保存して、お店のパソコン、スマホ、スタッフ全員から同じ予約台帳を見られるようにします。まずは今の運用(紙、Excel、LINEなど)を伺い、必要な範囲から小さく始めるご提案をします。</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap"><p><small>制作:となりのWeb屋(デモ)</small></p></div>
+  </footer>
+</body>
+</html>
