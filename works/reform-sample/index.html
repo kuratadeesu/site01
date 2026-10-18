@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>まるき工務店|住まいのリフォーム(制作サンプル)</title>
+  <meta name="description" content="となりのWeb屋が制作した、工務店・リフォーム会社のホームページのサンプルです。架空の会社です。">
+  <!-- 架空の会社なので、検索結果に出ないようにしておく -->
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="sample-bar">
+    <p>これは制作サンプルです。会社名・住所・電話番号・施工内容・費用はすべて架空です。画像は写真の代わりのイラストです。</p>
+    <a href="../../index.html#works">となりのWeb屋に戻る</a>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">まるき工務店</a>
+      <nav aria-label="メインメニュー">
+        <ul class="nav">
+          <li><a href="#works">施工事例</a></li>
+          <li><a href="#flow">工事の流れ</a></li>
+          <li><a href="#company">会社情報</a></li>
+          <li><a href="#contact" class="nav-cta">見積もり相談</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 最初に見せるのは、写真(ビフォーアフター) -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">住まいの工事・リフォーム</p>
+          <h1><span>住まいの「困った」を、</span><span>丁寧に直します。</span></h1>
+          <p class="lead">キッチン、浴室、外壁、床や壁まで。小さな工事から、お気軽にご相談ください。</p>
+          <p class="actions">
+            <a class="btn btn-main" href="tel:0600000002">電話で相談 06-0000-0002</a>
+            <a class="btn btn-line" href="#contact">見積もりを依頼する</a>
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="ba" style="--pos:50%">
+            <img class="ba-after" src="images/kitchen-a-after.svg" width="800" height="600" alt="リフォーム後のキッチン。白い収納と木の床になっている">
+            <img class="ba-before" src="images/kitchen-a-before.svg" width="800" height="600" alt="リフォーム前のキッチン。古い茶色の収納で、壁や床が汚れている">
+            <span class="ba-tag ba-tag-before" aria-hidden="true">施工前</span>
+            <span class="ba-tag ba-tag-after" aria-hidden="true">施工後</span>
+            <span class="ba-line" aria-hidden="true"><span class="ba-knob"></span></span>
+            <input type="range" min="0" max="100" value="50" aria-label="施工前と施工後の境目を動かす">
+          </div>
+          <p class="caption">境目をなぞって、施工前と施工後を比べられます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 施工事例 -->
+    <section class="section" id="works">
+      <div class="wrap">
+        <h2>施工事例</h2>
+        <p class="note-box">写真をタップすると、施工前と施工後を比べて見られます。この画面の画像は、写真の代わりのイラストです。実際の案件では、お客様の施工写真に差し替えます(掲載にはお客様の許可をいただきます)。</p>
+
+        <p class="filters" role="group" aria-label="工事の種類で絞り込む">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">すべて</button>
+          <button type="button" class="filter" data-filter="kitchen" aria-pressed="false">キッチン</button>
+          <button type="button" class="filter" data-filter="bath" aria-pressed="false">浴室</button>
+          <button type="button" class="filter" data-filter="exterior" aria-pressed="false">外壁</button>
+          <button type="button" class="filter" data-filter="living" aria-pressed="false">リビング・床</button>
+        </p>
+
+        <ul class="grid" id="grid">
+          <li data-cat="kitchen">
+            <button type="button" class="work" data-title="明るい白のキッチンに入れ替え" data-before="images/kitchen-a-before.svg" data-after="images/kitchen-a-after.svg" data-term="約5日" data-cost="90万円台" data-desc="古い収納と、汚れが目立つ壁と床を一新しました。収納を増やし、掃除しやすい造りにしています。">
+              <img src="images/kitchen-a-after.svg" width="800" height="600" loading="lazy" alt="リフォーム後の白いキッチン">
+              <span class="work-body"><span class="tag">キッチン</span><span class="work-title">明るい白のキッチンに入れ替え</span></span>
+            </button>
+          </li>
+          <li data-cat="exterior">
+            <button type="button" class="work" data-title="色あせた外壁を塗り替え" data-before="images/ext-a-before.svg" data-after="images/ext-a-after.svg" data-term="約2週間" data-cost="110万円台" data-desc="ひび割れの補修をしてから、外壁と屋根を塗り替えました。落ち着いた青灰色に仕上げています。">
+              <img src="images/ext-a-after.svg" width="800" height="600" loading="lazy" alt="塗り替え後の青灰色の外壁の住宅">
+              <span class="work-body"><span class="tag">外壁</span><span class="work-title">色あせた外壁を塗り替え</span></span>
+            </button>
+          </li>
+          <li data-cat="bath">
+            <button type="button" class="work" data-title="汚れが気になる浴室を一新" data-before="images/bath-before.svg" data-after="images/bath-after.svg" data-term="約7日" data-cost="100万円台" data-desc="古いタイルと浴槽を取り替え、明るい浴室にしました。掃除の手間が減ります。">
+              <img src="images/bath-after.svg" width="800" height="600" loading="lazy" alt="リフォーム後の明るい浴室">
+              <span class="work-body"><span class="tag">浴室</span><span class="work-title">汚れが気になる浴室を一新</span></span>
+            </button>
+          </li>
+          <li data-cat="kitchen">
+            <button type="button" class="work" data-title="濃紺の収納で、引き締まったキッチンに" data-before="images/kitchen-b-before.svg" data-after="images/kitchen-b-after.svg" data-term="約5日" data-cost="100万円台" data-desc="落ち着いた濃紺の収納と、明るい天板の組み合わせにしました。">
+              <img src="images/kitchen-b-after.svg" width="800" height="600" loading="lazy" alt="リフォーム後の濃紺の収納のキッチン">
+              <span class="work-body"><span class="tag">キッチン</span><span class="work-title">濃紺の収納で、引き締まったキッチンに</span></span>
+            </button>
+          </li>
+          <li data-cat="living">
+            <button type="button" class="work" data-title="リビングの床と壁を張り替え" data-before="images/living-before.svg" data-after="images/living-after.svg" data-term="約4日" data-cost="40万円台" data-desc="傷んだ床と、黄ばんだ壁紙を張り替えました。部屋全体が明るくなりました。">
+              <img src="images/living-after.svg" width="800" height="600" loading="lazy" alt="床と壁を張り替えた後のリビング">
+              <span class="work-body"><span class="tag">リビング・床</span><span class="work-title">リビングの床と壁を張り替え</span></span>
+            </button>
+          </li>
+          <li data-cat="exterior">
+            <button type="button" class="work" data-title="落ち着いた緑系の外壁に" data-before="images/ext-b-before.svg" data-after="images/ext-b-after.svg" data-term="約2週間" data-cost="120万円台" data-desc="外壁の汚れとひびを補修し、周りの緑になじむ色で塗り替えました。">
+              <img src="images/ext-b-after.svg" width="800" height="600" loading="lazy" alt="塗り替え後の緑系の外壁の住宅">
+              <span class="work-body"><span class="tag">外壁</span><span class="work-title">落ち着いた緑系の外壁に</span></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 工事の流れ -->
+    <section class="section alt" id="flow">
+      <div class="wrap split">
+        <h2>工事の流れ</h2>
+        <ol class="flow">
+          <li><strong>ご相談</strong><span>電話かフォームで、お困りごとをお聞かせください。</span></li>
+          <li><strong>現地調査</strong><span>お住まいを拝見して、状態と工事の範囲を確認します。</span></li>
+          <li><strong>お見積り</strong><span>項目ごとの金額を、分かりやすくご提示します。</span></li>
+          <li><strong>工事</strong><span>進み具合は、写真でご報告します。</span></li>
+          <li><strong>お引き渡しとアフター</strong><span>仕上がりを一緒に確認し、その後も点検にうかがいます。</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 会社情報 -->
+    <section class="section" id="company">
+      <div class="wrap split">
+        <h2>会社情報</h2>
+        <dl class="info">
+          <div><dt>会社名</dt><dd>まるき工務店(サンプル)</dd></div>
+          <div><dt>所在地</dt><dd>大阪府〇〇市△△町7-8-9</dd></div>
+          <div><dt>対応エリア</dt><dd>〇〇市とその周辺</dd></div>
+          <div><dt>受付時間</dt><dd>8:00〜18:00(日曜・祝日休み)</dd></div>
+          <div><dt>電話</dt><dd><a href="tel:0600000002">06-0000-0002</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="section alt" id="contact">
+      <div class="wrap split">
+        <h2>見積もり・ご相談</h2>
+        <div>
+          <p class="plain">小さな工事も、お気軽にご相談ください。お急ぎの方は、お電話が確実です。</p>
+          <p class="tel-big"><a href="tel:0600000002">06-0000-0002</a></p>
+          <p class="note-box">これは制作サンプルのため、フォームは送信されません。実際の案件では、会社のメールアドレスに届くようにします。</p>
+          <form id="sample-form" class="form" novalidate>
+            <p class="field"><label for="c-name">お名前</label><input id="c-name" type="text" autocomplete="off"></p>
+            <p class="field"><label for="c-tel">お電話番号</label><input id="c-tel" type="tel" autocomplete="off"></p>
+            <p class="field"><label for="c-kind">工事の種類</label>
+              <select id="c-kind">
+                <option>キッチン</option><option>浴室</option><option>外壁・屋根</option><option>リビング・床・壁</option><option>その他・まだ決まっていない</option>
+              </select>
+            </p>
+            <p class="field"><label for="c-msg">ご相談内容</label><textarea id="c-msg" rows="5"></textarea></p>
+            <button class="btn btn-main" type="submit">送信する(サンプル)</button>
+            <p id="form-msg" class="form-msg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">まるき工務店</p>
+      <p><small>&copy; まるき工務店(サンプル)/ 制作:となりのWeb屋</small></p>
+    </div>
+  </footer>
+
+  <!-- 施工事例の詳細(施工前後を比べる) -->
+  <dialog id="work-dialog" aria-labelledby="dlg-title">
+    <div class="dlg-body">
+      <button type="button" class="dlg-close" id="dlg-close" aria-label="閉じる">閉じる ×</button>
+      <h3 id="dlg-title"></h3>
+      <div class="ba" id="dlg-ba" style="--pos:50%">
+        <img class="ba-after" id="dlg-after" src="" width="800" height="600" alt="施工後">
+        <img class="ba-before" id="dlg-before" src="" width="800" height="600" alt="施工前">
+        <span class="ba-tag ba-tag-before" aria-hidden="true">施工前</span>
+        <span class="ba-tag ba-tag-after" aria-hidden="true">施工後</span>
+        <span class="ba-line" aria-hidden="true"><span class="ba-knob"></span></span>
+        <input type="range" min="0" max="100" value="50" aria-label="施工前と施工後の境目を動かす">
+      </div>
+      <p id="dlg-desc" class="dlg-desc"></p>
+      <dl class="dlg-meta">
+        <div><dt>工期の目安</dt><dd id="dlg-term"></dd></div>
+        <div><dt>費用の目安</dt><dd id="dlg-cost"></dd></div>
+      </dl>
+      <p class="note">※架空の数値です。実際の費用は、現地調査のうえお見積りします。</p>
+    </div>
+  </dialog>
+
+  <div class="call-bar">
+    <a class="call" href="tel:0600000002">電話する</a>
+    <a class="reserve" href="#contact">見積もり相談</a>
+  </div>
+</body>
+</html>

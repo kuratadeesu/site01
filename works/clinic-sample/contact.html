@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>お問い合わせ|やわらぎ整骨院(制作サンプル)</title>
+  <meta name="description" content="お電話とフォームからのご相談。">
+  <!-- 架空の店舗なので、検索結果に出ないようにしておく -->
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="sample-bar">
+    <p>これは制作サンプルです(基本プラン・5ページ)。店舗・住所・電話番号・料金はすべて架空のものです。</p>
+    <a href="../../index.html#works">となりのWeb屋に戻る</a>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">やわらぎ整骨院</a>
+      <nav aria-label="メインメニュー"><ul class="nav"><li><a href="index.html">トップ</a></li><li><a href="service.html">施術内容</a></li><li><a href="price.html">料金</a></li><li><a href="access.html">アクセス</a></li><li><a href="contact.html" aria-current="page">お問い合わせ</a></li></ul></nav>
+    </div>
+  </header>
+
+<div class="page-title"><div class="wrap"><h1>お問い合わせ</h1></div></div>
+
+  <main id="main">
+    <section class="block">
+      <div class="wrap">
+        <p class="lead-dark">お急ぎの方は、お電話が確実です。</p>
+        <p class="tel-big"><a href="tel:0600000001">06-0000-0001</a></p>
+        <p class="note">受付時間は、診療時間内です。</p>
+      </div>
+    </section>
+
+    <section class="block alt">
+      <div class="wrap">
+        <h2>フォームからのご相談</h2>
+        <p class="note-box">これは制作サンプルのため、送信はされません。実際の案件では、お店のメールアドレスに届くようにします。</p>
+        <form id="sample-form" class="form" novalidate>
+          <p class="field"><label for="c-name">お名前</label><input id="c-name" type="text" autocomplete="off"></p>
+          <p class="field"><label for="c-tel">お電話番号</label><input id="c-tel" type="tel" autocomplete="off"></p>
+          <p class="field"><label for="c-when">ご希望の日時(任意)</label><input id="c-when" type="text" placeholder="例:来週の火曜の夕方"></p>
+          <p class="field"><label for="c-msg">ご相談内容</label><textarea id="c-msg" rows="5"></textarea></p>
+          <button class="btn btn-main" type="submit">送信する(サンプル)</button>
+          <p id="form-msg" class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">やわらぎ整骨院</p>
+      <p>大阪府〇〇市△△町4-5-6(サンプル)/ 電話 06-0000-0001</p>
+      <p><small>&copy; やわらぎ整骨院(サンプル)/ 制作:となりのWeb屋</small></p>
+    </div>
+  </footer>
+
+  <!-- スマホでは、画面の下に電話とお問い合わせのボタンを常に表示する -->
+  <div class="call-bar">
+    <a class="call" href="tel:0600000001">電話する</a>
+    <a class="reserve" href="contact.html">ご予約・ご相談</a>
+  </div>
+</body>
+</html>
