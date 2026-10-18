@@ -175,6 +175,9 @@ tbody th { font-weight: 700; white-space: nowrap; }
 td:last-child { white-space: nowrap; font-weight: 700; }
 .table-scroll + .muted { margin-top: 1rem; }
 
+/* 料金の小見出し */
+.price-sub { margin: 2.5rem 0 .5rem; font-size: 1.1rem; font-weight: 700; }
+
 /* フォーム */
 .form { margin-top: 1.5rem; max-width: 560px; }
 .field { margin-bottom: 1.1rem; }
