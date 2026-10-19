@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ヘアサロン ここち|大阪の美容室(制作サンプル)</title>
+  <meta name="description" content="となりのWeb屋が制作した、美容室ホームページのサンプルです。架空の店舗です。">
+  <!-- 架空の店舗なので、検索結果に出ないようにしておく -->
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="sample-bar">
+    <p>これは制作サンプルです。店名・住所・電話番号・料金はすべて架空です。</p>
+    <a href="../../index.html#works">となりのWeb屋に戻る</a>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">ヘアサロン ここち</a>
+      <nav aria-label="メインメニュー">
+        <ul class="nav">
+          <li><a href="#menu">メニュー・料金</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#reserve" class="nav-cta">ご予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="deco" aria-hidden="true"><span class="c1"></span><span class="c2"></span></div>
+      <div class="wrap hero-inner">
+        <p class="en">Hair Salon</p>
+        <h1><span>ここちよく、</span><span>毎日が整う。</span></h1>
+        <p class="lead">髪のお悩みから、毎日のスタイリングまで。マンツーマンで、ゆっくりご相談ください。</p>
+        <p id="status" class="status" role="status"></p>
+        <p class="actions">
+          <a class="btn" href="#reserve">ネット予約</a>
+          <a class="btn btn-ghost" href="tel:0600000003">電話 06-0000-0003</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="points">
+      <div class="wrap">
+        <ul class="points">
+          <li><strong>マンツーマン</strong><span>最初から最後まで、同じスタッフが担当します。</span></li>
+          <li><strong>ご提案してから施術</strong><span>髪の状態をうかがい、内容と料金を先にご説明します。</span></li>
+          <li><strong>ネットで予約</strong><span>お店が閉まっている時間も、予約の申し込みができます。</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- メニュー(選ぶと合計が出る) -->
+    <section class="section alt" id="menu">
+      <div class="wrap">
+        <p class="en">Menu</p>
+        <h2>メニューと料金</h2>
+        <p class="plain">気になるメニューにチェックを入れると、合計金額と所要時間の目安が出ます。</p>
+
+        <form id="sim" class="sim" onsubmit="return false">
+          <p class="field">
+            <label for="len">髪の長さ</label>
+            <select id="len">
+              <option value="0">ショート</option>
+              <option value="1100">ミディアム(+1,100円)</option>
+              <option value="2200">ロング(+2,200円)</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend class="visually-hidden">メニューを選ぶ</legend>
+            <label class="row"><input type="checkbox" data-price="5500" data-min="60" data-len="0"><span class="name">カット</span><span class="min">60分</span><span class="yen">5,500円</span></label>
+            <label class="row"><input type="checkbox" data-price="7700" data-min="90" data-len="1"><span class="name">カラー</span><span class="min">90分</span><span class="yen">7,700円〜</span></label>
+            <label class="row"><input type="checkbox" data-price="9900" data-min="120" data-len="1"><span class="name">パーマ</span><span class="min">120分</span><span class="yen">9,900円〜</span></label>
+            <label class="row"><input type="checkbox" data-price="4400" data-min="30" data-len="1"><span class="name">トリートメント</span><span class="min">30分</span><span class="yen">4,400円〜</span></label>
+            <label class="row"><input type="checkbox" data-price="3850" data-min="30" data-len="0"><span class="name">ヘッドスパ</span><span class="min">30分</span><span class="yen">3,850円</span></label>
+          </fieldset>
+
+          <div class="total" aria-live="polite">
+            <p class="total-row"><span>合計(税込)</span><strong id="total-yen">0円</strong></p>
+            <p class="total-row"><span>所要時間の目安</span><strong id="total-time">―</strong></p>
+          </div>
+          <p class="note">※目安です。髪の状態によって、金額と時間が変わります。</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="access">
+      <div class="wrap">
+        <p class="en">Access</p>
+        <h2>アクセス・営業時間</h2>
+        <dl class="info">
+          <div><dt>営業時間</dt><dd>10:00〜19:00(最終受付 17:30)</dd></div>
+          <div><dt>定休日</dt><dd>火曜日</dd></div>
+          <div><dt>住所</dt><dd>大阪府〇〇市△△町2-3-4 2階<br><small>〇〇駅から徒歩3分(サンプルの住所です)</small></dd></div>
+          <div><dt>電話</dt><dd><a href="tel:0600000003">06-0000-0003</a></dd></div>
+          <div><dt>席数</dt><dd>3席(完全予約制)</dd></div>
+        </dl>
+        <!-- 実際の案件では、ここにGoogleマップを埋め込む -->
+      </div>
+    </section>
+
+    <section class="section alt" id="reserve">
+      <div class="wrap">
+        <p class="en">Reserve</p>
+        <h2>ご予約</h2>
+        <p class="plain">完全予約制です。ネット予約は24時間受け付けています。</p>
+        <p class="actions-dark">
+          <button type="button" class="btn" id="reserve-btn">ネットで予約する</button>
+          <a class="btn btn-ghost-dark" href="tel:0600000003">電話で予約する</a>
+        </p>
+        <p id="reserve-msg" class="reserve-msg" role="status"></p>
+        <p class="note-box">サンプルのため、ネット予約は動きません。実際の案件では、STORES予約などの予約サービスのページにつなぎます。<br>お店の中で使う予約台帳のイメージは、<a href="../reservation-demo/">こちらのデモ</a>で試せます。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">ヘアサロン ここち</p>
+      <p><small>&copy; ヘアサロン ここち(サンプル)/ 制作:となりのWeb屋</small></p>
+    </div>
+  </footer>
+
+  <div class="call-bar">
+    <a class="reserve" href="#reserve">ネット予約</a>
+    <a class="call" href="tel:0600000003">電話する</a>
+  </div>
+</body>
+</html>
